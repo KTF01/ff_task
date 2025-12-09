@@ -11,18 +11,38 @@ class RepositoryListPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Repository List')),
-      body: Center(
-        child: Column(
-          children: [
-            const Text('This is the Repository List Page'),
-            ElevatedButton(
-              onPressed: () {
-                router.pushNamed(RepositoryDetailPage.routeName);
-              },
-              child: Text('Go to Detail Page'),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                SearchBar(
+                  onTapOutside: (event) => FocusScope.of(context).unfocus(),
+                  hintText: "Search Repositories",
+                  onChanged: (value) {
+                    // Implement search logic here
+                  },
+                  trailing: [
+                    IconButton(
+                      icon: const Icon(Icons.search),
+                      onPressed: () {
+                        // Implement clear logic here
+                      },
+                    ),
+                  ],
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+          const Text('This is the Repository List Page'),
+          ElevatedButton(
+            onPressed: () {
+              router.pushNamed(RepositoryDetailPage.routeName);
+            },
+            child: Text('Go to Detail Page'),
+          ),
+        ],
       ),
     );
   }
