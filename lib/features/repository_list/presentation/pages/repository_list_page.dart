@@ -35,13 +35,6 @@ class RepositoryListPage extends StatelessWidget {
               ],
             ),
           ),
-          const Text('This is the Repository List Page'),
-          ElevatedButton(
-            onPressed: () {
-              router.pushNamed(RepositoryDetailPage.routeName);
-            },
-            child: Text('Go to Detail Page'),
-          ),
         ],
       ),
     );
