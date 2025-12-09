@@ -1,5 +1,3 @@
-import 'package:ff_task/core/router_config.dart';
-import 'package:ff_task/features/repository_detail/presentation/repository_detail_page.dart';
 import 'package:flutter/material.dart';
 
 class RepositoryListPage extends StatelessWidget {
