@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class RepositoryDetailPage extends StatelessWidget {
+  static const String routeName = 'detail';
+
   const RepositoryDetailPage({super.key});
 
   @override
