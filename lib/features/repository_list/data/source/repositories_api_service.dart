@@ -6,7 +6,7 @@ class RepositoriesApiService {
     BaseOptions(baseUrl: "https://api.github.com", headers: {"Accept": "application/json", "Content-type": "application/json"}),
   );
   Future<List<RepositoryModel>> fetchRepositories() async {
-    final result = await dio.get("/search/repositories?q=flutter");
+    final result = await dio.get("/search/repositories?q=''");
     List<RepositoryModel> repositories = (result.data['items'] as List).map((e) => RepositoryModel.fromJson(e)).toList();
     print("REPOSITORIES: ${repositories.length}");
 

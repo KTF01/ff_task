@@ -31,19 +31,15 @@ class _RepositoryListState extends State<RepositoryList> {
             return const Center(child: CircularProgressIndicator());
           } else if (state is RepositoriesLoaded) {
             final repositories = state.repositories;
+            if (repositories.isEmpty) {
+              return const Center(child: Text('No repositories found with this search'));
+            }
             return ListView.separated(
               itemCount: repositories.length,
               separatorBuilder: (context, index) => const Divider(),
               itemBuilder: (context, index) {
                 final repo = repositories[index];
-                return ListTile(
-                  title: Text(repo.name),
-                  subtitle: Text(repo.description ?? 'No description'),
-                  onTap: () {
-                    // Navigate to detail page
-                    // GoRouter.of(context).goNamed(RepositoryDetailPage.routeName, extra: repo);
-                  },
-                );
+                return ListTile(title: Text(repo.name), subtitle: Text(repo.description), onTap: () {});
               },
             );
           } else if (state is RepositoriesError) {
