@@ -1,0 +1,15 @@
+import 'package:flutter/material.dart';
+
+class RepositoryDetailPage extends StatelessWidget {
+  static const String routeName = 'detail';
+
+  const RepositoryDetailPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Repository Detail')),
+      body: const Center(child: Text('This is the Repository Detail Page')),
+    );
+  }
+}
