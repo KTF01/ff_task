@@ -1,5 +1,5 @@
-import 'package:ff_task/features/repository_list/presentation/block/repositories_block.dart';
-import 'package:ff_task/features/repository_list/presentation/block/repositories_events.dart';
+import 'package:ff_task/features/repository_list/presentation/bloc/repositories_block.dart';
+import 'package:ff_task/features/repository_list/presentation/bloc/repositories_events.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
