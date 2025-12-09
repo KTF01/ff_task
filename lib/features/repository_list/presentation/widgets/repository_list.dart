@@ -1,5 +1,4 @@
 import 'package:ff_task/features/repository_list/presentation/block/repositories_block.dart';
-import 'package:ff_task/features/repository_list/presentation/block/repositories_events.dart';
 import 'package:ff_task/features/repository_list/presentation/block/repositories_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -12,17 +11,9 @@ class RepositoryList extends StatefulWidget {
 }
 
 class _RepositoryListState extends State<RepositoryList> {
-  late RepositoriesBlock bloc;
-  @override
-  void initState() {
-    // TODO: implement initState
-    bloc = BlocProvider.of<RepositoriesBlock>(context);
-    bloc.add(GetRepositories());
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
+    final bloc = context.read<RepositoriesBlock>();
     return Flexible(
       child: BlocBuilder(
         bloc: bloc,
@@ -45,7 +36,7 @@ class _RepositoryListState extends State<RepositoryList> {
           } else if (state is RepositoriesError) {
             return Center(child: Text('Error: ${state.errorMessage}'));
           } else {
-            return const Center(child: Text('No data available'));
+            return const Center(child: Text('Use the search bar to find repositories.'));
           }
         },
       ),

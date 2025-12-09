@@ -12,7 +12,7 @@ class RepositoriesBlock extends Bloc<RepositoriesEvent, RepositoriesState> {
 
   Future<void> getCharacters(GetRepositories event, Emitter<RepositoriesState> emit) async {
     emit(RepositoriesLoading());
-    final dataResult = await _getRepositoriesUseCase.call(null);
+    final dataResult = await _getRepositoriesUseCase.call(event.searchQuery);
 
     if (dataResult is DataSuccess) {
       emit(RepositoriesLoaded(repositories: dataResult.data ?? []));

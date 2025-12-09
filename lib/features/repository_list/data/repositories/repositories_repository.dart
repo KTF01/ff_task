@@ -7,9 +7,9 @@ class RepositoriesRepository {
   final RepositoriesApiService _apiService;
   RepositoriesRepository(this._apiService);
 
-  Future<ResourceState<List<RepositoryModel>>> getRepositories() async {
+  Future<ResourceState<List<RepositoryModel>>> getRepositories(String searchQuery) async {
     try {
-      final response = await _apiService.fetchRepositories();
+      final response = await _apiService.fetchRepositories(searchQuery);
       return DataSuccess(response);
     } on DioException catch (exception) {
       return DataFailed(exception);
