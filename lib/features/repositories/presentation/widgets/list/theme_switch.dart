@@ -1,5 +1,5 @@
-import 'package:ff_task/features/them_switch/presentation/bloc/theme_switch_block.dart';
-import 'package:ff_task/features/them_switch/presentation/bloc/theme_switch_event.dart';
+import 'package:ff_task/features/theme_switch/presentation/bloc/theme_switch_block.dart';
+import 'package:ff_task/features/theme_switch/presentation/bloc/theme_switch_event.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

@@ -1,8 +1,7 @@
-import 'package:ff_task/features/repositories/domain/usecases/get_repositories_list_usecase.dart';
 import 'package:ff_task/features/repositories/presentation/bloc/repositories_block.dart';
-import 'package:ff_task/features/them_switch/presentation/bloc/theme_switch_block.dart';
-import 'package:ff_task/features/them_switch/presentation/bloc/theme_switch_event.dart';
-import 'package:ff_task/features/them_switch/presentation/bloc/theme_swtich_state.dart';
+import 'package:ff_task/features/theme_switch/presentation/bloc/theme_switch_block.dart';
+import 'package:ff_task/features/theme_switch/presentation/bloc/theme_switch_event.dart';
+import 'package:ff_task/features/theme_switch/presentation/bloc/theme_swtich_state.dart';
 import 'package:test/expect.dart';
 import 'package:test/scaffolding.dart';
 
@@ -24,7 +23,7 @@ void main() {
   });
 
   group(RepositoriesBlock, () {
-    late RepositoriesBlock bloc;
+    // late RepositoriesBlock bloc;
 
     setUp(() {
       //  bloc = RepositoriesBlock(GetRepositoriesUseCase());
