@@ -14,7 +14,15 @@ class RepositoriesRepository implements IRepositoryRepository {
       final response = await _apiService.fetchRepositories(searchQuery);
       return DataSuccess(response);
     } on DioException catch (exception) {
-      return DataFailed(exception);
+      return DataFailed(
+        DioException(
+          requestOptions: exception.requestOptions,
+          response: exception.response,
+          type: exception.type,
+          error: exception.error,
+          message: "Failled to fetch repositories. Status code: ${exception.response?.statusCode}",
+        ),
+      );
     }
   }
 }

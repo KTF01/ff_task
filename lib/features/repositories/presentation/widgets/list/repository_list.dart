@@ -35,7 +35,9 @@ class _RepositoryListState extends State<RepositoryList> {
               },
             );
           } else if (state is RepositoriesError) {
-            return Center(child: Text('Error: ${state.errorMessage}'));
+            return Center(
+              child: Text('${state.errorMessage}', style: const TextStyle(color: Colors.red)),
+            );
           } else {
             return const Center(child: Text('Use the search bar to find repositories.'));
           }
