@@ -1,5 +1,5 @@
-import 'package:ff_task/features/repository_detail/presentation/widgets/link_button.dart';
-import 'package:ff_task/features/repository_list/data/models/owner.dart';
+import 'package:ff_task/features/repositories/presentation/widgets/detail/link_button.dart';
+import 'package:ff_task/features/repositories/data/models/owner.dart';
 import 'package:flutter/material.dart';
 
 class ProfileHeader extends StatelessWidget {

@@ -1,4 +1,4 @@
-import 'package:ff_task/features/repository_list/data/models/repository_model.dart';
+import 'package:ff_task/features/repositories/data/models/repository_model.dart';
 
 abstract class RepositoriesState {}
 

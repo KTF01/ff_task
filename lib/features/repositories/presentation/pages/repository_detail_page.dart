@@ -1,8 +1,8 @@
-import 'package:ff_task/features/repository_detail/presentation/widgets/description_area.dart';
-import 'package:ff_task/features/repository_detail/presentation/widgets/info_row.dart';
-import 'package:ff_task/features/repository_detail/presentation/widgets/link_button.dart';
-import 'package:ff_task/features/repository_detail/presentation/widgets/profile_header.dart';
-import 'package:ff_task/features/repository_list/data/models/repository_model.dart';
+import 'package:ff_task/features/repositories/presentation/widgets/detail/description_area.dart';
+import 'package:ff_task/features/repositories/presentation/widgets/detail/info_row.dart';
+import 'package:ff_task/features/repositories/presentation/widgets/detail/link_button.dart';
+import 'package:ff_task/features/repositories/presentation/widgets/detail/profile_header.dart';
+import 'package:ff_task/features/repositories/data/models/repository_model.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 

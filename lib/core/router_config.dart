@@ -1,5 +1,5 @@
-import 'package:ff_task/features/repository_detail/presentation/pages/repository_detail_page.dart';
-import 'package:ff_task/features/repository_list/presentation/pages/repository_list_page.dart';
+import 'package:ff_task/features/repositories/presentation/pages/repository_detail_page.dart';
+import 'package:ff_task/features/repositories/presentation/pages/repository_list_page.dart';
 import 'package:go_router/go_router.dart';
 
 final router = GoRouter(

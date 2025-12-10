@@ -1,4 +1,4 @@
-import 'package:ff_task/features/repository_list/data/models/owner.dart';
+import 'package:ff_task/features/repositories/data/models/owner.dart';
 
 class RepositoryModel {
   int id;

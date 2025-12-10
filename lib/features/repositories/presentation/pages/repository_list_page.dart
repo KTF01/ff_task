@@ -1,10 +1,10 @@
-import 'package:ff_task/features/repository_list/data/repositories/repositories_repository.dart';
-import 'package:ff_task/features/repository_list/data/source/repositories_api_service.dart';
-import 'package:ff_task/features/repository_list/domain/usecases/get_repositories_list_usecase.dart';
-import 'package:ff_task/features/repository_list/presentation/bloc/repositories_block.dart';
-import 'package:ff_task/features/repository_list/presentation/widgets/c_search_bar.dart';
-import 'package:ff_task/features/repository_list/presentation/widgets/repository_list.dart';
-import 'package:ff_task/features/repository_list/presentation/widgets/theme_switch.dart';
+import 'package:ff_task/features/repositories/data/repositories/repositories_repository.dart';
+import 'package:ff_task/features/repositories/data/source/repositories_api_service.dart';
+import 'package:ff_task/features/repositories/domain/usecases/get_repositories_list_usecase.dart';
+import 'package:ff_task/features/repositories/presentation/bloc/repositories_block.dart';
+import 'package:ff_task/features/repositories/presentation/widgets/list/c_search_bar.dart';
+import 'package:ff_task/features/repositories/presentation/widgets/list/repository_list.dart';
+import 'package:ff_task/features/repositories/presentation/widgets/list/theme_switch.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

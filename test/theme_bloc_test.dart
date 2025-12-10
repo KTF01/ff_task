@@ -1,5 +1,5 @@
-import 'package:ff_task/features/repository_list/domain/usecases/get_repositories_list_usecase.dart';
-import 'package:ff_task/features/repository_list/presentation/bloc/repositories_block.dart';
+import 'package:ff_task/features/repositories/domain/usecases/get_repositories_list_usecase.dart';
+import 'package:ff_task/features/repositories/presentation/bloc/repositories_block.dart';
 import 'package:ff_task/features/them_switch/presentation/bloc/theme_switch_block.dart';
 import 'package:ff_task/features/them_switch/presentation/bloc/theme_switch_event.dart';
 import 'package:ff_task/features/them_switch/presentation/bloc/theme_swtich_state.dart';

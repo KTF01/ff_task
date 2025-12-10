@@ -1,6 +1,6 @@
-import 'package:ff_task/features/repository_list/presentation/bloc/repositories_block.dart';
-import 'package:ff_task/features/repository_list/presentation/bloc/repositories_state.dart';
-import 'package:ff_task/features/repository_list/presentation/widgets/list_item.dart';
+import 'package:ff_task/features/repositories/presentation/bloc/repositories_block.dart';
+import 'package:ff_task/features/repositories/presentation/bloc/repositories_state.dart';
+import 'package:ff_task/features/repositories/presentation/widgets/list/list_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

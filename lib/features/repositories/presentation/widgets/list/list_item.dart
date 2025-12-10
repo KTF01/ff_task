@@ -1,5 +1,5 @@
-import 'package:ff_task/features/repository_detail/presentation/pages/repository_detail_page.dart';
-import 'package:ff_task/features/repository_list/data/models/repository_model.dart';
+import 'package:ff_task/features/repositories/presentation/pages/repository_detail_page.dart';
+import 'package:ff_task/features/repositories/data/models/repository_model.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
