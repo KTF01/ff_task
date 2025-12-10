@@ -20,20 +20,24 @@ class RepositoryDetailPage extends StatelessWidget {
     final format = DateFormat('yyyy-MM-dd hh:mm');
     return Scaffold(
       appBar: AppBar(title: Text(repo.name)),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            ProfileHeader(owner: repo.owner),
-            const SizedBox(height: 16),
-            DescriptionArea(description: repo.description),
-            Divider(),
-            InfoRow(label: "Forks", value: repo.forksCount.toString()),
-            InfoRow(label: "Created", value: format.format(repo.createdAt)),
-            InfoRow(label: "Last update", value: format.format(repo.updatedAt)),
-            LinkButton(url: Uri.parse(repo.htmlUrl), label: 'Link: $repoUrl'),
-          ],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                ProfileHeader(owner: repo.owner),
+                const SizedBox(height: 16),
+                DescriptionArea(description: repo.description),
+                Divider(),
+                InfoRow(label: "Forks", value: repo.forksCount.toString()),
+                InfoRow(label: "Created", value: format.format(repo.createdAt)),
+                InfoRow(label: "Last update", value: format.format(repo.updatedAt)),
+                LinkButton(url: Uri.parse(repo.htmlUrl), label: 'Link: $repoUrl'),
+              ],
+            ),
+          ),
         ),
       ),
     );

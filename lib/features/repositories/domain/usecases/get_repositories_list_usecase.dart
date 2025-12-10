@@ -1,14 +1,14 @@
 import 'package:ff_task/core/data_state.dart';
 import 'package:ff_task/core/usecase.dart';
-import 'package:ff_task/features/repositories/data/models/repository_model.dart';
-import 'package:ff_task/features/repositories/data/repositories/repositories_repository.dart';
+import 'package:ff_task/features/repositories/domain/entities/repository.dart';
+import 'package:ff_task/features/repositories/domain/repository/repository_repository.dart';
 
-class GetRepositoriesUseCase implements UseCase<DataState<List<RepositoryModel>>, String> {
-  final RepositoriesRepository _repository;
+class GetRepositoriesUseCase implements UseCase<DataState<List<RepositoryEntity>>, String> {
+  final IRepositoryRepository _repository;
   GetRepositoriesUseCase(this._repository);
 
   @override
-  Future<DataState<List<RepositoryModel>>> call(String searchQuery) {
+  Future<DataState<List<RepositoryEntity>>> call(String searchQuery) {
     return _repository.getRepositories(searchQuery);
   }
 }

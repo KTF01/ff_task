@@ -1,4 +1,4 @@
-import 'package:ff_task/features/repositories/data/models/repository_model.dart';
+import 'package:ff_task/features/repositories/domain/entities/repository.dart';
 
 abstract class RepositoriesState {}
 
@@ -7,7 +7,7 @@ class RepositoriesInit extends RepositoriesState {}
 class RepositoriesLoading extends RepositoriesState {}
 
 class RepositoriesLoaded extends RepositoriesState {
-  List<RepositoryModel> repositories;
+  List<RepositoryEntity> repositories;
   RepositoriesLoaded({required this.repositories});
 }
 

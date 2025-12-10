@@ -1,5 +1,5 @@
+import 'package:ff_task/features/repositories/domain/entities/repository.dart';
 import 'package:ff_task/features/repositories/presentation/pages/repository_detail_page.dart';
-import 'package:ff_task/features/repositories/data/models/repository_model.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
@@ -7,7 +7,7 @@ import 'package:intl/intl.dart';
 class ListItem extends StatelessWidget {
   const ListItem(this.repo, {super.key});
 
-  final RepositoryModel repo;
+  final RepositoryEntity repo;
 
   @override
   Widget build(BuildContext context) {
