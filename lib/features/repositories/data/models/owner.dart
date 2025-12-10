@@ -1,16 +1,9 @@
-class Owner {
-  final String login;
-  final int id;
-  final String avatarUrl;
-  final String htmlUrl;
+import 'package:ff_task/features/repositories/domain/entities/owner.dart';
 
-  Owner({required this.login, required this.id, required this.avatarUrl, required this.htmlUrl});
+class OwnerModel extends OwnerEntity {
+  const OwnerModel({required super.login, required super.id, required super.avatarUrl, required super.htmlUrl});
 
-  factory Owner.fromJson(Map<String, dynamic> json) {
-    return Owner(login: json['login'], id: json['id'], avatarUrl: json['avatar_url'], htmlUrl: json['html_url']);
-  }
-
-  Map<String, dynamic> toJson() {
-    return {'login': login, 'id': id, 'avatar_url': avatarUrl, 'html_url': htmlUrl};
+  factory OwnerModel.fromJson(Map<String, dynamic> json) {
+    return OwnerModel(login: json['login'], id: json['id'], avatarUrl: json['avatar_url'], htmlUrl: json['html_url']);
   }
 }

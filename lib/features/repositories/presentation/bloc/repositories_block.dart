@@ -1,4 +1,4 @@
-import 'package:ff_task/core/resource_state.dart';
+import 'package:ff_task/core/data_state.dart';
 import 'package:ff_task/features/repositories/domain/usecases/get_repositories_list_usecase.dart';
 import 'package:ff_task/features/repositories/presentation/bloc/repositories_events.dart';
 import 'package:ff_task/features/repositories/presentation/bloc/repositories_state.dart';

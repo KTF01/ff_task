@@ -1,26 +1,17 @@
 import 'package:ff_task/features/repositories/data/models/owner.dart';
+import 'package:ff_task/features/repositories/domain/entities/repository.dart';
 
-class RepositoryModel {
-  int id;
-  String name;
-  String fullName;
-  Owner owner;
-  String description;
-  String htmlUrl;
-  DateTime createdAt;
-  DateTime updatedAt;
-  int forksCount;
-
-  RepositoryModel({
-    required this.id,
-    required this.name,
-    required this.fullName,
-    required this.owner,
-    required this.description,
-    required this.htmlUrl,
-    required this.createdAt,
-    required this.updatedAt,
-    required this.forksCount,
+class RepositoryModel extends RepositoryEntity {
+  const RepositoryModel({
+    required super.id,
+    required super.name,
+    required super.fullName,
+    required OwnerModel super.owner,
+    required super.description,
+    required super.htmlUrl,
+    required super.createdAt,
+    required super.updatedAt,
+    required super.forksCount,
   });
 
   factory RepositoryModel.fromJson(Map<String, dynamic> json) {
@@ -28,7 +19,7 @@ class RepositoryModel {
       id: json['id'],
       name: json['name'],
       fullName: json['full_name'],
-      owner: Owner.fromJson(json['owner']),
+      owner: OwnerModel.fromJson(json['owner']),
       description: json['description'] ?? '',
       htmlUrl: json['html_url'],
       createdAt: DateTime.parse(json['created_at']),

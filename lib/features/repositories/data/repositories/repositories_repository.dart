@@ -1,13 +1,15 @@
 import 'package:dio/dio.dart';
-import 'package:ff_task/core/resource_state.dart';
+import 'package:ff_task/core/data_state.dart';
 import 'package:ff_task/features/repositories/data/models/repository_model.dart';
 import 'package:ff_task/features/repositories/data/source/repositories_api_service.dart';
+import 'package:ff_task/features/repositories/domain/repository/repository_repository.dart';
 
-class RepositoriesRepository {
+class RepositoriesRepository implements IRepositoryRepository {
   final RepositoriesApiService _apiService;
   RepositoriesRepository(this._apiService);
 
-  Future<ResourceState<List<RepositoryModel>>> getRepositories(String searchQuery) async {
+  @override
+  Future<DataState<List<RepositoryModel>>> getRepositories(String searchQuery) async {
     try {
       final response = await _apiService.fetchRepositories(searchQuery);
       return DataSuccess(response);

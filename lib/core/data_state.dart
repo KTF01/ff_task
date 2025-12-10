@@ -1,15 +1,15 @@
 import 'package:dio/dio.dart';
 
-class ResourceState<T> {
+class DataState<T> {
   T? data;
   DioException? exception;
-  ResourceState({this.data, this.exception});
+  DataState({this.data, this.exception});
 }
 
-class DataSuccess<T> extends ResourceState<T> {
+class DataSuccess<T> extends DataState<T> {
   DataSuccess(T? data) : super(data: data);
 }
 
-class DataFailed<T> extends ResourceState<T> {
+class DataFailed<T> extends DataState<T> {
   DataFailed(DioException? exception) : super(exception: exception);
 }

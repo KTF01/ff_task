@@ -1,10 +1,10 @@
+import 'package:ff_task/features/repositories/domain/entities/owner.dart';
 import 'package:ff_task/features/repositories/presentation/widgets/detail/link_button.dart';
-import 'package:ff_task/features/repositories/data/models/owner.dart';
 import 'package:flutter/material.dart';
 
 class ProfileHeader extends StatelessWidget {
   const ProfileHeader({super.key, required this.owner});
-  final Owner owner;
+  final OwnerEntity owner;
 
   @override
   Widget build(BuildContext context) {
